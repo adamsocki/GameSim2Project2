@@ -691,7 +691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunOrigin: {fileID: 650063867}
   player: {fileID: 1319519049}
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 1137023220}
   gunDirection: {fileID: 0}
 --- !u!1 &688583490
 GameObject:
