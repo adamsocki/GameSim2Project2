@@ -4,13 +4,20 @@ Game Proposal:
 The game is a 3D
 
 The player is walking down a corridor. The goal is to reach the end of the
-corridor without dying. There are several obstacles that may prevent the player
-from reaching the end. There are also characters that pop up and have to be shot
-by the player in a limited time frame. The player must also be careful not to
-shoot at anything because some of them will be 'friendly/civilian' characters.
+corridor without dying. There are several obstacles/puzzles that must be solved
+that may prevent the player from reaching the end. There are also characters
+that pop up and have to be shot by the player in a limited time frame. The
+player must also be careful not to shoot at anything because some of them will
+be 'friendly/civilian' characters.
 
 It's a rapid game so the idea is to see how far the player can get in a single
 round without being killed or without hitting one of the unintended objects.
 
 The feeling that the player should have is tension but also one where they are
 not certain which things are friendly and which are not.
+
+
+One thing in particular that I'd like to learn to implement with this is to
+build some type of automatic level generating system. Rather than having to code
+each discrete level, I would like to create a system which uses certain input
+parameters to generate the levels as the game will be 'endless'.

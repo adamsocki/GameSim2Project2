@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../GameProposal.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../GameProposal.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CrosshairController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CrosshairController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,9 +19,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Arcade_Socki2/Assets/PlayerMover.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/city1/Assets/OrderManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Platformer2_Socki/Assets/EntityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Arcade_Socki/Assets/LerpMover.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../c#_course/RockPaperScissors/RockPaperScissors/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646613446632</updated>
-      <workItem from="1646613454277" duration="4067000" />
+      <workItem from="1646613454277" duration="7839000" />
     </task>
     <servers />
   </component>
@@ -96,5 +105,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/GameController.cs</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/GameController.cs" initialLine="17" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="354" />
+            </startOffsets>
+            <endOffsets>
+              <option value="355" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

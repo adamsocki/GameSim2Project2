@@ -1,0 +1,20 @@
+{
+  "level": [
+    {
+      "levelNo": 0,
+      "numberOfEnemies": 1,
+      "numberOfBlocks": 2
+    },
+    {
+      "levelNo": 1,
+      "numberOfEnemies": 2,
+      "numberOfBlocks": 1
+    },
+    {
+      "levelNo": 2,
+      "numberOfEnemies": 3,
+      "numberOfBlocks": 1
+    }
+
+  ]
+}
