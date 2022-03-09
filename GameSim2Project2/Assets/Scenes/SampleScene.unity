@@ -608,7 +608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650063867}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.26, y: 0.93, z: 0.8}
+  m_LocalPosition: {x: -0.033, y: 0.39, z: 0.655}
   m_LocalScale: {x: 0.23, y: 0.41, z: 0.35}
   m_Children: []
   m_Father: {fileID: 1319519054}
@@ -1182,6 +1182,7 @@ GameObject:
   - component: {fileID: 1319519051}
   - component: {fileID: 1319519055}
   - component: {fileID: 1319519056}
+  - component: {fileID: 1319519050}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1189,6 +1190,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1319519050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319519049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcb713193aaf47109c7650b7cb85e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshair: {fileID: 1137023220}
 --- !u!136 &1319519051
 CapsuleCollider:
   m_ObjectHideFlags: 0

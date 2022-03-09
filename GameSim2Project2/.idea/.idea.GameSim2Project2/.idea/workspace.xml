@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GunRayCast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GunRayCast.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MousePosition3D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MousePosition3D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646613446632</updated>
-      <workItem from="1646613454277" duration="10118000" />
+      <workItem from="1646613454277" duration="11445000" />
     </task>
     <servers />
   </component>

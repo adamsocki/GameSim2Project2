@@ -13,7 +13,6 @@ public class MousePosition3D : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit raycastHit))
         {
             transform.position = raycastHit.point;
-            Debug.Log(raycastHit.distance);
         }
 
     }
