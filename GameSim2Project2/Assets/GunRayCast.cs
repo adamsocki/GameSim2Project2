@@ -27,7 +27,7 @@ public class GunRayCast : MonoBehaviour
         Ray rayPlayerGun = new Ray(gunOrigin.transform.position, gunOrigin.transform.up);
         Physics.Raycast(rayPlayerGun, out RaycastHit hitInfo);
         Debug.DrawRay(gunOrigin.transform.position, gunOrigin.transform.up, Color.black);
-        Debug.Log(hitInfo.distance);
+        //Debug.Log(hitInfo.distance);
         
         Ray rayPlayer = new Ray(player.transform.position, Vector3.forward);
         Physics.Raycast(rayPlayer, out hitInfo);
