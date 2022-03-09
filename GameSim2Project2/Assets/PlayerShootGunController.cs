@@ -21,6 +21,11 @@ public class PlayerShootGunController : MonoBehaviour
             bulletShotPlayer.transform.position = transform.position;
             bulletShotPlayer.transform.rotation = transform.rotation;
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("SecondaryMouse.");
+        }
         
     }
 }
