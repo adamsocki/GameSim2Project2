@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FSMController_EnemyAI : MonoBehaviour
 {
+    public int health;
+    public char enemyType;
     public enum EnemyState
     {
         Idle,
-        Patroling,
-        Walking,
+        Patrolling,
         Shooting,
         Dead
     }
@@ -19,6 +20,10 @@ public class FSMController_EnemyAI : MonoBehaviour
     void Start()
     {
         state = EnemyState.Idle;
+        if (enemyType == 'A')
+        {
+            health = 100;
+        }
     }
 
     public void EnemyPlayer()
@@ -28,9 +33,10 @@ public class FSMController_EnemyAI : MonoBehaviour
             case EnemyState.Idle:
             {
                 
+                
             } break;
 
-            case EnemyState.Patroling:
+            case EnemyState.Patrolling:
             {
                 
             } break;
@@ -44,6 +50,11 @@ public class FSMController_EnemyAI : MonoBehaviour
             {
                 
             } break;
+        }
+
+        if (health <= 0)
+        {
+            state = EnemyState.Dead;
         }
     }
 
