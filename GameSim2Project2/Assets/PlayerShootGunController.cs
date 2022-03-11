@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlayerShootGunController : MonoBehaviour
 {
     public GameObject bullet;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,12 +21,15 @@ public class PlayerShootGunController : MonoBehaviour
             bulletShotPlayer.SetActive(true);
             bulletShotPlayer.transform.position = transform.position;
             bulletShotPlayer.transform.rotation = transform.rotation;
-        }
+            {
+            }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log("SecondaryMouse.");
+            if (Input.GetMouseButtonDown(1))
+            {
+                Debug.Log("SecondaryMouse.");
+            }
+
         }
-        
     }
 }
+

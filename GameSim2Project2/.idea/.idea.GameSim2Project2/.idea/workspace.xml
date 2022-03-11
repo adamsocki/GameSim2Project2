@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="" />
+    <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BulletShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BulletShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerShootGunController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerShootGunController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Platformer2_Socki/Assets/EntityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Arcade_Socki/Assets/LerpMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../c#_course/RockPaperScissors/RockPaperScissors/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemyAI_A.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1646613446632</updated>
       <workItem from="1646613454277" duration="11798000" />
-      <workItem from="1646856389670" duration="2326000" />
+      <workItem from="1646856389670" duration="4233000" />
     </task>
     <servers />
   </component>

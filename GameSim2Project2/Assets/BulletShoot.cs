@@ -29,11 +29,16 @@ public class BulletShoot : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
+        Debug.Log(other.name);
         if (other.tag == "Wall")
-        {
-            
+        {   
             Destroy(gameObject);
+        }
+
+        if (other.tag == "EnemyA")
+        {
+            //Debug.Log("HitEnemyA");
+            //other.GetComponent<>()
         }
     }
 }
