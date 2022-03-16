@@ -9,7 +9,7 @@ public class LevelTemplateController : MonoBehaviour
     void Start()
     {
         float currentLevel = levelManager.GetComponent<LevelController>().currentLevel;
-        Vector3 position = new Vector3(0, 1, (100 * currentLevel));
+        Vector3 position = new Vector3(0, 1, (100 * (currentLevel ) ));
         gameObject.transform.position = position; 
     }
 
