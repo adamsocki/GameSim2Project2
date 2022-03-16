@@ -13,10 +13,12 @@ public class LevelTemplateGeneration : MonoBehaviour
         {
             GameObject bulletShotPlayer = Instantiate(nextLevel) as GameObject;
             levelManager.GetComponent<LevelController>().currentLevel++;
+            
+            Debug.Log("Hit");
             // ToDO: Add Logic here to set up new level attributes. 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
-        
     }
 
     // Start is called before the first frame update
