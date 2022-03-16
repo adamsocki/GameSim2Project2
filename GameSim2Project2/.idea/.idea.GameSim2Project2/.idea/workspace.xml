@@ -81,7 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1646613446632</updated>
       <workItem from="1646613454277" duration="11798000" />
-      <workItem from="1646856389670" duration="7944000" />
+      <workItem from="1646856389670" duration="8325000" />
+      <workItem from="1647469470810" duration="318000" />
     </task>
     <servers />
   </component>
@@ -120,6 +121,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/LevelTemplateController.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/LevelTemplateController.cs" initialLine="45" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="1491" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1540" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

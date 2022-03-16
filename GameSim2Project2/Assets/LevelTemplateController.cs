@@ -10,7 +10,7 @@ public class LevelTemplateController : MonoBehaviour
     
     public GameObject[] barrierSectors = new GameObject[4];
 
-    public Vector3 barrier1Test;
+    private Vector3 barrierPosition;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,23 +28,25 @@ public class LevelTemplateController : MonoBehaviour
             
         }
         // Gme
-        // barrier creation
-        gameObject.transform.position = positionForNewLevel; 
-        // barrier placement
         
-      
+        gameObject.transform.position = positionForNewLevel;
         for (int i = 0; i < 4; i++)
         {
+            // barrier shape
             
+            //barrierSectors[i].transform.localScale = 
+            
+            // barrier placement
+            barrierPosition.z = currentLevelZFactor - (80f) + (20f * i);
+            barrierPosition.x = Random.Range(-20, 30);
+            Debug.Log(barrierPosition.x);
+            barrierSectors[i].transform.position = barrierPosition;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        float currentLevel = levelManager.GetComponent<LevelController>().currentLevel;
-        float currentLevelZFactor = (100 * currentLevel);
-        barrier1Test.z = currentLevelZFactor;
-        barrierSectors[0].transform.position = barrier1Test;
+        
     }
 }
