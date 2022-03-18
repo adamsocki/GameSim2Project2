@@ -20,7 +20,10 @@ public class EnemyAI_A : MonoBehaviour
         TurnAround
     }
 
+    public Vector3 rotation;
+
     private CharacterController controller;
+    public float rotateSpeed;
     public float seachForPlayerSpeed;
     public AIState enemyState;
 
@@ -37,10 +40,10 @@ public class EnemyAI_A : MonoBehaviour
     {
        
         //enemy vision
-        Ray rayEnemyVision = new Ray(transform.position, Vector3.right);
+        Ray rayEnemyVision = new Ray(transform.position, transform.forward);
         Physics.Raycast(rayEnemyVision, out RaycastHit rayEnemyVisionInfo);
-        Debug.Log(rayEnemyVisionInfo.collider);
-        Debug.DrawRay(transform.position, Vector3.right, Color.green);
+        //Debug.Log(rayEnemyVisionInfo.collider);
+        Debug.DrawRay(transform.position, transform.forward, Color.green);
         
         // enemy walk
         Vector3 dir = new Vector3(0,0,0);
@@ -48,7 +51,8 @@ public class EnemyAI_A : MonoBehaviour
         {
             case SearchForPlayerState.WalkForward:
             {
-                dir = Vector3.right;
+                //searchState = SearchForPlayerState.TurnAround;
+                dir = transform.forward;
                 if (rayEnemyVisionInfo.distance < 5)
                 {
                     searchState = SearchForPlayerState.TurnAround;
@@ -59,6 +63,23 @@ public class EnemyAI_A : MonoBehaviour
             {
                 // rotate in player direction
                 //if ()
+                Quaternion target = Quaternion.Euler(rotation);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, target, Time.deltaTime * rotateSpeed);
+                if (target == transform.rotation)
+                {
+                    Debug.Log(rotation);
+                    if (rotation.y == 270)
+                    {
+                      //  Debug.Log("hit1");
+                        rotation.y = 90;
+                    }
+                    else if (rotation.y == 90)
+                    {
+                       // Debug.Log("hit2");
+                        rotation.y = 270;
+                    }
+                    searchState = SearchForPlayerState.WalkForward;
+                }
                 
             } break;
         }

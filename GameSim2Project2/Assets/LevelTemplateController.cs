@@ -39,7 +39,7 @@ public class LevelTemplateController : MonoBehaviour
             barrierPosition.z = currentLevelZFactor - (80f) + (20f * i);
             barrierPosition.x = Random.Range(-20, 30);
             barrierPosition.y = ground.transform.localPosition.y + (barrierSize.y / 2) + 1.5f;
-            Debug.Log(barrierPosition.x);
+//            Debug.Log(barrierPosition.x);
             barrierSectors[i].transform.position = barrierPosition;
         }
     }
