@@ -38,17 +38,17 @@ public class EnemyAI_A : MonoBehaviour
 
     private void SearchForPlayer()
     {
-       
         //enemy vision
         Ray rayEnemyVision = new Ray(transform.position, transform.forward);
         Physics.Raycast(rayEnemyVision, out RaycastHit rayEnemyVisionInfo);
-        //Debug.Log(rayEnemyVisionInfo.collider);
+       // Debug.Log(rayEnemyVisionInfo.collider.name);
         Debug.DrawRay(transform.position, transform.forward, Color.green);
 
-        if (rayEnemyVisionInfo.collider.tag == "Player")
-        {
-            enemyState = AIState.AttackingPlayer;
-        }
+        // Debug.Log(rayEnemyVisionInfo.collider.tag);
+        // if (rayEnemyVisionInfo.collider.tag == "Player")
+        // {
+        //     enemyState = AIState.AttackingPlayer;
+        // }
         
         // enemy walk
         Vector3 dir = new Vector3(0,0,0);
@@ -101,10 +101,7 @@ public class EnemyAI_A : MonoBehaviour
         {
             case AIState.Walking:
             {
-                
                 SearchForPlayer();
-                
-                
             } break;
             
             case AIState.AttackingPlayer:
