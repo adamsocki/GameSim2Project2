@@ -44,6 +44,11 @@ public class EnemyAI_A : MonoBehaviour
         Physics.Raycast(rayEnemyVision, out RaycastHit rayEnemyVisionInfo);
         //Debug.Log(rayEnemyVisionInfo.collider);
         Debug.DrawRay(transform.position, transform.forward, Color.green);
+
+        if (rayEnemyVisionInfo.collider.tag == "Player")
+        {
+            enemyState = AIState.AttackingPlayer;
+        }
         
         // enemy walk
         Vector3 dir = new Vector3(0,0,0);
@@ -67,7 +72,7 @@ public class EnemyAI_A : MonoBehaviour
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, target, Time.deltaTime * rotateSpeed);
                 if (target == transform.rotation)
                 {
-                    Debug.Log(rotation);
+                    //Debug.Log(rotation);
                     if (rotation.y == 270)
                     {
                       //  Debug.Log("hit1");
@@ -80,10 +85,14 @@ public class EnemyAI_A : MonoBehaviour
                     }
                     searchState = SearchForPlayerState.WalkForward;
                 }
-                
             } break;
         }
         controller.Move(dir * seachForPlayerSpeed * Time.deltaTime);
+    }
+
+    private void AttackingPlayer()
+    {
+        
     }
     // Update is called once per frame
     void Update()
@@ -100,7 +109,7 @@ public class EnemyAI_A : MonoBehaviour
             
             case AIState.AttackingPlayer:
             {
-                
+                AttackingPlayer();
             } break;
             
             
