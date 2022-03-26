@@ -1,8 +1,8 @@
 To Do for game:
 
-1. Kill AI Enemy with bullet.
+1. Kill AI Enemy with bullet. DONE
 
-1.a Add score for each kill.
+1.a Add score for each kill. DONE
 
 2. Make AI Attack player
 
@@ -14,4 +14,5 @@ To Do for game:
 
 6. Make environment look nice.
 
-7. 
+7. Create enemy animation.
+
