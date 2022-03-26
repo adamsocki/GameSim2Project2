@@ -41,7 +41,7 @@ public class BulletShoot : MonoBehaviour
         {
             Debug.Log("HitEnemyA");
             other.GetComponent<EnemyAI_A>().enemyHealth--;
-            scoreController.GetComponent<ScoreManager>().currentScore++;
+            //scoreController.GetComponent<ScoreManager>().currentScore++;
             Destroy(gameObject);
         }
     }

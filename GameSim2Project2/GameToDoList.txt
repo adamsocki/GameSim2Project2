@@ -6,7 +6,7 @@ To Do for game:
 
 2. Make AI Attack player
 
-3. Build a high score system for kill and level count.
+3. Build a high score system for kill and level count. 
 
 4. Make shader for tank tires.
 

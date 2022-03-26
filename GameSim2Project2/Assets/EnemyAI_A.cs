@@ -9,6 +9,7 @@ public class EnemyAI_A : MonoBehaviour
     public bool enemyDeadSeq1;
     public bool enemyOnGround;
     public GameObject scoreController;
+    //public GameObject score
     public enum AIState
     {
         Walking,
@@ -106,6 +107,7 @@ public class EnemyAI_A : MonoBehaviour
         // reader.Close();
         if (enemyDeadSeq1)
         {
+            scoreController.GetComponent<ScoreManager>().currentScore++;
             FileStream fs = new FileStream("Assets/highScore.txt",FileMode.OpenOrCreate, 
                 FileAccess.ReadWrite, 
                 FileShare.None);
