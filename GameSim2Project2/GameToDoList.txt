@@ -1,0 +1,17 @@
+To Do for game:
+
+1. Kill AI Enemy with bullet.
+
+1.a Add score for each kill.
+
+2. Make AI Attack player
+
+3. Build a high score system for kill and level count.
+
+4. Make shader for tank tires.
+
+5. Make Materials for game objects.
+
+6. Make environment look nice.
+
+7. 

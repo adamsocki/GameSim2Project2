@@ -6,6 +6,8 @@ using UnityEngine;
 public class BulletShoot : MonoBehaviour
 {
     public float bulletSpeed;
+
+    public GameObject scoreController;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,7 @@ public class BulletShoot : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,8 +39,10 @@ public class BulletShoot : MonoBehaviour
 
         if (other.tag == "EnemyA")
         {
-            //Debug.Log("HitEnemyA");
-            //other.GetComponent<>()
+            Debug.Log("HitEnemyA");
+            other.GetComponent<EnemyAI_A>().enemyHealth--;
+            scoreController.GetComponent<ScoreManager>().currentScore++;
+            Destroy(gameObject);
         }
     }
 }

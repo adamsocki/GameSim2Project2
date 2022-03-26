@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.IO;
 
 public class EnemyAI_A : MonoBehaviour
 {
+    public bool enemyDeadSeq1;
     public bool enemyOnGround;
+    public GameObject scoreController;
     public enum AIState
     {
         Walking,
@@ -22,6 +26,7 @@ public class EnemyAI_A : MonoBehaviour
 
     public Vector3 rotation;
 
+    public int enemyHealth;
     private CharacterController controller;
     public float rotateSpeed;
     public float seachForPlayerSpeed;
@@ -90,9 +95,45 @@ public class EnemyAI_A : MonoBehaviour
         controller.Move(dir * seachForPlayerSpeed * Time.deltaTime);
     }
 
+    private void EnemyDead()
+    {
+        //FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+
+        
+        // StreamReader reader = new StreamReader("Assets/highScore.txt");
+        // string scoreReader = reader.ReadLine();
+        // int scoreInt = int.Parse(scoreReader);
+        // reader.Close();
+        if (enemyDeadSeq1)
+        {
+            FileStream fs = new FileStream("Assets/highScore.txt",FileMode.OpenOrCreate, 
+                FileAccess.ReadWrite, 
+                FileShare.None);
+
+            StreamReader reader = new StreamReader(fs);
+            string scoreReader = reader.ReadLine();
+            int scoreInt = int.Parse(scoreReader);
+            reader.Close();
+        
+            Debug.Log(scoreInt);
+            Debug.Log("size:" + scoreController.GetComponent<ScoreManager>().currentScore);
+            if (scoreInt < scoreController.GetComponent<ScoreManager>().currentScore)
+            {
+                StreamWriter writer = new StreamWriter("Assets/highScore.txt", false);
+                writer.WriteLine(scoreController.GetComponent<ScoreManager>().currentScore);
+                writer.Close();
+            }
+
+            enemyDeadSeq1 = false;
+        }
+        
+
+        //StreamWriter writer = new StreamWriter("Assets/highScore.txt", true);
+        //writer.Write(current)
+    }
     private void AttackingPlayer()
     {
-        
+       
     }
     // Update is called once per frame
     void Update()
@@ -108,8 +149,16 @@ public class EnemyAI_A : MonoBehaviour
             {
                 AttackingPlayer();
             } break;
+
+            case AIState.Dead:
+            {
+                EnemyDead();
+            } break;
             
-            
+        }
+        if (enemyHealth <= 0)
+        {
+            enemyState = AIState.Dead;
         }
     }
 }
