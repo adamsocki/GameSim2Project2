@@ -16,3 +16,5 @@ To Do for game:
 
 7. Create enemy animation.
 
+8. Add audio for door opening
+

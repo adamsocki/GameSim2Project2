@@ -8,6 +8,8 @@ public class DoorOpenerCont : MonoBehaviour
     public GameObject leftDoor;
     public bool openDoor;
     public float doorSpeed;
+    public AudioSource doorSound;
+    public AudioClip clip;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class DoorOpenerCont : MonoBehaviour
         
         if (openDoor)
         {
+            doorSound.Play();
             Vector3 rightMovement = Vector3.right;
             Vector3 leftMovement = Vector3.left;
             rightDoor.transform.position += (rightMovement * Time.deltaTime * doorSpeed);
