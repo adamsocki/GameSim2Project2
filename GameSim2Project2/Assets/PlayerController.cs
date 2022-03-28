@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
 
+    public float playerHealth;
+
     public float speed;
     // Start is called before the first frame update
     void Start()

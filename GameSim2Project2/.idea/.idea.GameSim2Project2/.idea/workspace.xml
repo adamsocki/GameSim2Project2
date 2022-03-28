@@ -3,24 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BulletShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BulletShoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelTemplateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelTemplateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_397mxsp00jm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_397mxsp00jm.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_568c3paepyj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_568c3paepyj.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_697q2munaik.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_09_18_fst_697q2munaik.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_12_21_fst_80914f864ed-0392-4187-b4f3-0bf0095e051e.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2015_12_21_fst_80914f864ed-0392-4187-b4f3-0bf0095e051e.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2017_7_14_fst_brick-wall-texture.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2017_7_14_fst_brick-wall-texture.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2017_9_28_fst_wall-brick-cracked-orange.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2017_9_28_fst_wall-brick-cracked-orange.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2018_2_27_fst_planks-brown-surface.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/photos_2018_2_27_fst_planks-brown-surface.jpg.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/../../GameSim2Project1/Project1/Assets/OnMouseOverlapStartGame.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Platformer2_Socki/Assets/EntityManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BulletShootEnemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/EnemyAiTutorial.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GameSim2Project1/Project1/Assets/FSMController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelTemplateController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -114,7 +101,7 @@
       <workItem from="1646856389670" duration="8325000" />
       <workItem from="1647469470810" duration="3992000" />
       <workItem from="1647552142525" duration="15330000" />
-      <workItem from="1648334585884" duration="8238000" />
+      <workItem from="1648334585884" duration="13469000" />
     </task>
     <servers />
   </component>

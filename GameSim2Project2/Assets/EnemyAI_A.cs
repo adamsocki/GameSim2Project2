@@ -16,11 +16,16 @@ public class EnemyAI_A : MonoBehaviour
     public bool enemyDeadSeq1;
     public bool enemyOnGround;
     public GameObject scoreController;
+
+    public float timeElapsedBetweenEnemyShots;
+
+    public float timePauseBetweenEnemyShots;
     //public GameObject score
     public enum AIState
     {
         Walking,
         LookingForPlayer,
+        ChasingPlayer,
         LookingAtPlayer,
         ShootingAtPlayer,
         AttackingPlayer,
@@ -33,7 +38,8 @@ public class EnemyAI_A : MonoBehaviour
     }
 
     public Vector3 rotation;
-
+    public GameObject bullet;
+    public float chasingPlayerSpeed;
     public int enemyHealth;
     private CharacterController controller;
     public float rotateSpeed;
@@ -142,6 +148,34 @@ public class EnemyAI_A : MonoBehaviour
     {
        
     }
+
+    private void ChasingPlayer()
+    {
+        Vector3 dir = new Vector3(0, 0, 0);
+        dir = Vector3.forward;
+        Vector3 direction = player.transform.position - transform.position; 
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
+        Debug.Log("Chasing");
+        dir = transform.TransformDirection(dir);
+        controller.Move(dir * chasingPlayerSpeed * Time.deltaTime);
+
+        timeElapsedBetweenEnemyShots += Time.deltaTime;
+        
+        if (timeElapsedBetweenEnemyShots > timePauseBetweenEnemyShots)
+        {
+            GameObject bulletShotEnemy = Instantiate(bullet) as GameObject;
+            bulletShotEnemy.SetActive(true);
+            bulletShotEnemy.transform.position = transform.position;
+            bulletShotEnemy.transform.rotation = transform.rotation;
+            timeElapsedBetweenEnemyShots = 0;
+        }
+        
+        // if (playerInAttackRange)
+        // {
+        //     enemyState = AIState.AttackingPlayer;
+        // }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -150,7 +184,15 @@ public class EnemyAI_A : MonoBehaviour
             case AIState.Walking:
             {
                 SearchForPlayer();
-                playerInSightRange = Physics.CheckSphere(transform.position, sightRange);
+                playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+                if (playerInSightRange)
+                {
+                    enemyState = AIState.ChasingPlayer;
+                }
+            } break;
+            case AIState.ChasingPlayer:
+            {
+                ChasingPlayer();
             } break;
             
             case AIState.AttackingPlayer:

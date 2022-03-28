@@ -23,15 +23,9 @@ public class BulletShoot : MonoBehaviour
         transform.position += (transform.up * Time.deltaTime * bulletSpeed);
     }
 
-    
-    private void OnCollisionEnter(Collision collision)
-    {
-        //Debug.Log(collision.gameObject.name);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
+        //Debug.Log(other.name);
         if (other.tag == "Wall")
         {   
             Destroy(gameObject);
@@ -39,7 +33,7 @@ public class BulletShoot : MonoBehaviour
 
         if (other.tag == "EnemyA")
         {
-            Debug.Log("HitEnemyA");
+            //Debug.Log("HitEnemyA");
             other.GetComponent<EnemyAI_A>().enemyHealth--;
             //scoreController.GetComponent<ScoreManager>().currentScore++;
             Destroy(gameObject);
