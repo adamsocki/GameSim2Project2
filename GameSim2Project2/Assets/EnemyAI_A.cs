@@ -53,40 +53,40 @@ public class EnemyAI_A : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         enemyState = AIState.Walking;
+        searchState = SearchForPlayerState.WalkForward;
     }
 
     private void SearchForPlayer()
     {
+        
         //enemy vision
         Ray rayEnemyVision = new Ray(transform.position, transform.forward);
         Physics.Raycast(rayEnemyVision, out RaycastHit rayEnemyVisionInfo);
-       // Debug.Log(rayEnemyVisionInfo.collider.name);
+        //Debug.Log(rayEnemyVisionInfo.collider.name);
         Debug.DrawRay(transform.position, transform.forward, Color.green);
-
-        // Debug.Log(rayEnemyVisionInfo.collider.tag);
-        // if (rayEnemyVisionInfo.collider.tag == "Player")
-        // {
-        //     enemyState = AIState.AttackingPlayer;
-        // }
         
-        // enemy walk
-        Vector3 dir = new Vector3(0,0,0);
+        Vector3 walk = new Vector3();
+        
         switch (searchState)
         {
             case SearchForPlayerState.WalkForward:
             {
                 //searchState = SearchForPlayerState.TurnAround;
-                dir = transform.forward;
+                walk = transform.forward;
                 if (rayEnemyVisionInfo.distance < 5)
                 {
                     searchState = SearchForPlayerState.TurnAround;
                 }
+                Vector3 move = Vector3.forward;
+                move.z = (move.z * Time.deltaTime * seachForPlayerSpeed);
+                move = transform.TransformDirection(move);
+                transform.position += move;
+                //controller.Move(walk * seachForPlayerSpeed * Time.deltaTime);
             } break;
 
             case SearchForPlayerState.TurnAround:
             {
                 // rotate in player direction
-                //if ()
                 Quaternion target = Quaternion.Euler(rotation);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, target, Time.deltaTime * rotateSpeed);
                 if (target == transform.rotation)
@@ -106,17 +106,12 @@ public class EnemyAI_A : MonoBehaviour
                 }
             } break;
         }
-        controller.Move(dir * seachForPlayerSpeed * Time.deltaTime);
+        
+        //controller.Move(walk * seachForPlayerSpeed * Time.deltaTime);
     }
 
     private void EnemyDead()
     {
-        //FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
-
-        // StreamReader reader = new StreamReader("Assets/highScore.txt");
-        // string scoreReader = reader.ReadLine();
-        // int scoreInt = int.Parse(scoreReader);
-        // reader.Close();
         if (enemyDeadSeq1)
         {
             scoreController.GetComponent<ScoreManager>().currentScore++;
@@ -151,12 +146,13 @@ public class EnemyAI_A : MonoBehaviour
 
     private void ChasingPlayer()
     {
-        Vector3 dir = new Vector3(0, 0, 0);
+        //Vector3 dir = new Vector3(0, 0, 0);
+        Vector3 dir = new Vector3();
         dir = Vector3.forward;
         Vector3 direction = player.transform.position - transform.position; 
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotateSpeed);
-        Debug.Log("Chasing");
+        //Debug.Log("Chasing");
         dir = transform.TransformDirection(dir);
         controller.Move(dir * chasingPlayerSpeed * Time.deltaTime);
 
@@ -170,11 +166,6 @@ public class EnemyAI_A : MonoBehaviour
             bulletShotEnemy.transform.rotation = transform.rotation;
             timeElapsedBetweenEnemyShots = 0;
         }
-        
-        // if (playerInAttackRange)
-        // {
-        //     enemyState = AIState.AttackingPlayer;
-        // }
     }
     // Update is called once per frame
     void Update()
@@ -190,6 +181,7 @@ public class EnemyAI_A : MonoBehaviour
                     enemyState = AIState.ChasingPlayer;
                 }
             } break;
+            
             case AIState.ChasingPlayer:
             {
                 ChasingPlayer();
@@ -205,10 +197,12 @@ public class EnemyAI_A : MonoBehaviour
                 EnemyDead();
             } break;
             
+            
         }
         if (enemyHealth <= 0)
         {
             enemyState = AIState.Dead;
         }
     }
+    
 }

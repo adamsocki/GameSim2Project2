@@ -14,9 +14,13 @@ public class LevelTemplateGeneration : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Instantiate(nextLevel);
+            //GameObject level = new GameObject("")
+            
             //GameObject bulletShotPlayer = Instantiate(nextLevel) as GameObject;
+            
             levelManager.GetComponent<LevelController>().currentLevel++;
+            
+            Instantiate(nextLevel);
             doorManager.GetComponent<DoorOpenerCont>().openDoor = true;
             // ToDO: Add Logic here to set up new level attributes. 
             gameObject.SetActive(false);
