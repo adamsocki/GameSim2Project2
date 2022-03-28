@@ -6,11 +6,14 @@ public class LevelTemplateController : MonoBehaviour
 {
     public GameObject levelManager;
     public GameObject ground;
-
+    
     public GameObject[] barrierSectors = new GameObject[4];
-
+    public GameObject[] enemySectors = new GameObject[4];
+    
     private Vector3 barrierPosition;
     private Vector3 barrierSize;
+
+    public Vector3 enemyPosition;
     
     // Start is called before the first frame update
     void Start()
@@ -19,14 +22,19 @@ public class LevelTemplateController : MonoBehaviour
         float currentLevelZFactor = (100 * currentLevel);
         Vector3 positionForNewLevel = new Vector3(0, 1, currentLevelZFactor);
 
-        // enemy creation
-        int numberOfEnemies = Random.Range(0, 4);
-        for (int i = 0; i < numberOfEnemies; i++)
-        {
-
-        }
-        // Gme
         gameObject.transform.position = positionForNewLevel;
+        // enemy creation
+        int numberOfEnemies = Random.Range(1, 4);
+        for (int i = 0; i < 4; i++)
+        {
+            //enemy placement
+            enemyPosition.x = Random.Range(-10, 15);
+            enemyPosition.y = 1.5f;
+            enemyPosition.z =  (-80f) + (15f * i) ;
+            Debug.Log(enemyPosition.z);
+            enemySectors[i].transform.localPosition = enemyPosition;
+        }
+        // Game
         for (int i = 0; i < 4; i++)
         {
             // barrier shape

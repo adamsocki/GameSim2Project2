@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.IO;
+using UnityEngine.AI;
 
 public class EnemyAI_A : MonoBehaviour
 {
+    public LayerMask whatIsPlayer;
+    public bool playerInSightRange;
+    public float sightRange;
+    public bool playerInAttackRange;
+    public float attackRange;
+    public Transform player;
     public bool enemyDeadSeq1;
     public bool enemyOnGround;
     public GameObject scoreController;
@@ -100,7 +107,6 @@ public class EnemyAI_A : MonoBehaviour
     {
         //FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
 
-        
         // StreamReader reader = new StreamReader("Assets/highScore.txt");
         // string scoreReader = reader.ReadLine();
         // int scoreInt = int.Parse(scoreReader);
@@ -129,7 +135,6 @@ public class EnemyAI_A : MonoBehaviour
             enemyDeadSeq1 = false;
         }
         
-
         //StreamWriter writer = new StreamWriter("Assets/highScore.txt", true);
         //writer.Write(current)
     }
@@ -145,6 +150,7 @@ public class EnemyAI_A : MonoBehaviour
             case AIState.Walking:
             {
                 SearchForPlayer();
+                playerInSightRange = Physics.CheckSphere(transform.position, sightRange);
             } break;
             
             case AIState.AttackingPlayer:
