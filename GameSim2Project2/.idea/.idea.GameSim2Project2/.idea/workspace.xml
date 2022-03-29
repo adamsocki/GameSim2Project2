@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/highScore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/highScore.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
