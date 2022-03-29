@@ -602,7 +602,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da2a0c850f3a34949beb43a042f2b975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -675,7 +675,7 @@ MonoBehaviour:
   rotation: {x: 0, y: 270, z: 0}
   bullet: {fileID: 1560894712}
   chasingPlayerSpeed: 5
-  enemyHealth: 3
+  enemyHealth: 1
   rotateSpeed: 80
   seachForPlayerSpeed: 10
   enemyState: 0
@@ -1766,7 +1766,7 @@ MonoBehaviour:
   rotation: {x: 0, y: 270, z: 0}
   bullet: {fileID: 1560894712}
   chasingPlayerSpeed: 5
-  enemyHealth: 3
+  enemyHealth: 1
   rotateSpeed: 80
   seachForPlayerSpeed: 10
   enemyState: 0
@@ -1804,7 +1804,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da2a0c850f3a34949beb43a042f2b975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2679,7 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487ca001eb2c843fca75aa26faf2d964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 0
+  playerHealth: 1
   speed: 22.95
 --- !u!1 &1369427598
 GameObject:
@@ -2906,7 +2906,7 @@ MonoBehaviour:
   rotation: {x: 0, y: 270, z: 0}
   bullet: {fileID: 1560894712}
   chasingPlayerSpeed: 5
-  enemyHealth: 3
+  enemyHealth: 1
   rotateSpeed: 80
   seachForPlayerSpeed: 10
   enemyState: 0
@@ -2944,7 +2944,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da2a0c850f3a34949beb43a042f2b975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3482,7 +3482,7 @@ MonoBehaviour:
   rotation: {x: 0, y: 270, z: 0}
   bullet: {fileID: 1560894712}
   chasingPlayerSpeed: 5
-  enemyHealth: 3
+  enemyHealth: 1
   rotateSpeed: 80
   seachForPlayerSpeed: 10
   enemyState: 0
@@ -3520,7 +3520,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: da2a0c850f3a34949beb43a042f2b975, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

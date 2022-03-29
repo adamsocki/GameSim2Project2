@@ -54,6 +54,9 @@ public class EnemyAI_A : MonoBehaviour
         controller = GetComponent<CharacterController>();
         enemyState = AIState.Walking;
         searchState = SearchForPlayerState.WalkForward;
+        enemyHealth = 1;
+        var color = gameObject.GetComponent<Renderer>();
+        color.material.SetColor("_Color", Color.red);
     }
 
     private void SearchForPlayer()
@@ -112,6 +115,8 @@ public class EnemyAI_A : MonoBehaviour
 
     private void EnemyDead()
     {
+        var color = gameObject.GetComponent<Renderer>();
+        color.material.SetColor("_Color", Color.black);
         if (enemyDeadSeq1)
         {
             scoreController.GetComponent<ScoreManager>().currentScore++;

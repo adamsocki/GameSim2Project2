@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioSource audioSound;
+    public AudioClip clip;
+    
     public void PlayGame()
     {
         SceneManager.LoadScene("SampleScene");

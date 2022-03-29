@@ -3,12 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="61b83981-4ddc-484b-ab27-3b68f82dc84b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameSim2Project2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BulletShoot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EnemyAI_A.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelTemplateGeneration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/YouDied.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/YouDied.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/highScore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/highScore.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     <setting file="file://$USER_HOME$/Downloads/EnemyAiTutorial.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../GameSim2Project1/Project1/Assets/FSMController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelTemplateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/YouDiedScreen.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/OnHighlight.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Arcade_Socki2/Assets/PlayerMover.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../GameSim1/Assignment2/Arcade_Socki/Assets/LerpMover.cs" root0="SKIP_HIGHLIGHTING" />
@@ -103,7 +105,7 @@
       <workItem from="1646856389670" duration="8325000" />
       <workItem from="1647469470810" duration="3992000" />
       <workItem from="1647552142525" duration="15330000" />
-      <workItem from="1648334585884" duration="16566000" />
+      <workItem from="1648334585884" duration="19298000" />
     </task>
     <servers />
   </component>

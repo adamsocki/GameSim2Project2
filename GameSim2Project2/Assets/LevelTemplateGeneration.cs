@@ -7,7 +7,7 @@ public class LevelTemplateGeneration : MonoBehaviour
 {
     public GameObject nextLevel;
     public GameObject levelManager;
-
+    
     public GameObject doorManager;
     
     private void OnTriggerEnter(Collider other)
@@ -20,7 +20,16 @@ public class LevelTemplateGeneration : MonoBehaviour
             
             levelManager.GetComponent<LevelController>().currentLevel++;
             
-            Instantiate(nextLevel);
+            GameObject newLevel = Instantiate(nextLevel);
+            for (int i = 0; i < 4; i++)
+            {
+                //nextLevel.GetComponent<LevelTemplateController>().enemySectors[i].GetComponent<EnemyAI_A>().enemyState =
+                    //EnemyAI_A.AIState.Walking;
+                  //  newLevel.GetComponent<LevelTemplateController>().enemySectors[i].GetComponent<EnemyAI_A>()
+                //        .enemyHealth = 1;
+                 //   newLevel.GetComponent<LevelTemplateController>().enemySectors[i].GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+            }
+            
             doorManager.GetComponent<DoorOpenerCont>().openDoor = true;
             // ToDO: Add Logic here to set up new level attributes. 
             gameObject.SetActive(false);
